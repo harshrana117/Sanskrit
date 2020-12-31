@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import React, {useState, useEffect} from 'react'
+import { Route, Switch, HashRouter, Redirect } from 'react-router-dom';
 import './App.css';
+import Navbar from './Components/Navbar'
+import HomePage from './pages/HomePage';
+import LearnPage from './pages/LearnPage';
+import CompetePage from './pages/CompetePage';
+import ContentCard from './Components/ContentCard';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <HashRouter>
+        <Navbar/>
+        <Switch>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/learn" exact component={LearnPage} />
+          <Route path="/compete" exact component={CompetePage} />
+          {/* ye wala page ko manually khol ke dekh lena, time nhi tha isliye aise kr diye h */}
+          <Route path="/content" exact component={ContentCard} />
+        </Switch>
+      </HashRouter>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
