@@ -1,11 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import Paper from '@material-ui/core/Paper';
+import {Link} from 'react-router-dom'
 
 const LevelCard = (props) => {
     return (
         <>
-            <CardContainer>
+            <CardContainer to='/content'>
                 <Card elevation={4}>
                     <Content>
                         {props.LevelTitle}
@@ -18,12 +19,16 @@ const LevelCard = (props) => {
 
 export default LevelCard
 
-const CardContainer = styled.div`
-    padding:10px;
+const CardContainer = styled(Link)`
+    text-decoration:none;
+    padding:5px;
+    margin:5px;
+    border-radius:50%50%;
+    border:0.5px solid rgba(26, 35, 126,0.5);
 `
 
 const Card = styled(Paper)`
-    background-color:rgba(63,81,181,1);
+    background-color:rgba(255,255,255,0.1);
     border-radius:50%;
     max-width:140px;
     max-height:140px;
@@ -33,14 +38,21 @@ const Card = styled(Paper)`
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    border:5px solid #1a237e;
+    border:0.5px solid rgba(26, 35, 126,0.5);
+    transition:all 0.4s;
+
+    &:hover{
+        cursor:pointer;
+        background-color:rgba(26, 35, 126,0.1);
+        transition:all 0.4s;
+    }
 `
 const Content = styled.p`
-    color:white;
+    color:rgba(26, 35, 126,0.8);
     font-size:18px;
     font-weight:bold;
-    border-bottom:1px solid white;
-    border-top:1px solid white;
+    border-bottom:0.5px solid rgba(26, 35, 126,0.2);
+    border-top:0.5px solid rgba(26, 35, 126,0.2);
 
 `
 

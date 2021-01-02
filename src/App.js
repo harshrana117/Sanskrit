@@ -5,7 +5,7 @@ import Navbar from './Components/Navbar'
 import HomePage from './pages/HomePage';
 import LearnPage from './pages/LearnPage';
 import CompetePage from './pages/CompetePage';
-import ContentCard from './Components/ContentCard';
+import ContentPage from './pages/ContentPage';
 
 
 const App = () => {
@@ -18,7 +18,7 @@ const App = () => {
           <Route path="/learn" exact component={LearnPage} />
           <Route path="/compete" exact component={CompetePage} />
           {/* ye wala page ko manually khol ke dekh lena, time nhi tha isliye aise kr diye h */}
-          <Route path="/content" exact component={ContentCard} />
+          <Route path="/content" exact component={ContentPage} />
         </Switch>
       </HashRouter>
     </div>

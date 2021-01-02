@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
 import LevelCard from '../Components/LevelCard';
+import LevelOne from '../images/level-1-back.png';
 
 const LearnPage = () => {
     return (
-        <>
+        <Div>
             <Header>
                 <Head>LEARN</Head>
             </Header>
@@ -36,19 +37,28 @@ const LearnPage = () => {
                     </LevelSectionContainer>
                 </LevelSection>
             </LevelContainer>
-        </>
+        </Div>
     )
 }
 
 export default LearnPage
+const Div = styled.div`
+    background-image:url(${LevelOne});
+    background-size:800px;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center bottom;
+`
 
 const Header = styled.div`
-    background-color:#3f51b5;
+    background-color:rgba(63,81,181,0.05);
+    backdrop-filter: blur(10px) saturate(100%) contrast(55%) brightness(120%);
     padding:20px;
+    border-bottom:2px solid rgba(63,81,181,0.1);
 `
 
 const Head = styled.h1`
-    color:white;
+    color:rgba(63,81,181,0.8);
     font-weight:normal;
     font-size:48px;
 `
@@ -60,10 +70,11 @@ const LevelContainer = styled.div`
     padding:20px 10px 100px 10px;
 `
 const LevelSection = styled.div`
+    backdrop-filter: blur(10px) saturate(100%) contrast(55%) brightness(120%);
     display:flex;
     flex-direction:column;
     justify-content:center;
-    background-color:#f5f5f5;
+    background-color:rgba(63,81,181,0.05);
     border-radius:20px;
     margin:20px 0px;
 `
