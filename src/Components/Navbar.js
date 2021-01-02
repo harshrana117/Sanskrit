@@ -8,7 +8,6 @@ import HomeIcon from '@material-ui/icons/Home';
 import SchoolIcon from '@material-ui/icons/School';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
-import Zoom from '@material-ui/core/Zoom';
 
 
 // bottom nav
@@ -18,6 +17,8 @@ const useStyles = makeStyles({
     position: 'fixed',
     bottom: 0,
     boxShadow: '0px -1px 6px -4px rgba(0,0,0,0.75)',
+    backgroundColor:'rgba(63,81,181,0.05)',
+    backdropFilter: "blur(8px) saturate(100%) contrast(65%) brightness(130%)",
     zIndex: 100
   }
 });
@@ -34,14 +35,12 @@ export default function Navbar() {
 
   return (
     <div>
-      <Zoom in={true} style={{ transitionDelay: true ? '500ms' : '0ms' }}>
       <BottomNavigation value={value} onChange={handleChange} className={classes.bottomNav} showLabels={true}>
         <BottomNavigationAction label="Home" value="Home" icon={<HomeIcon />} component={Link} to={'/'} />
         <BottomNavigationAction label="Learn" value="Learn" icon={<SchoolIcon />} component={Link} to={'/learn'} />
         <BottomNavigationAction label="Compete" value="Compete" icon={<ScheduleIcon />} component={Link} to={'/compete'} />
         <BottomNavigationAction label="Account" value="Account" icon={<PersonIcon />} component={Link} to={'/account'} />
       </BottomNavigation>
-      </Zoom>
     </div>
   );
 }
