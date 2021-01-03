@@ -1,10 +1,19 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import styled from 'styled-components'
 import LevelOne from '../images/level-1-back.png';
+import {module1} from '../data/data.js'
+
+// console.log(module1);
+
+// console.log(module1.Items);
 
 const ContentCard = () => {
+  // useEffect(() => {
+  //   module1.Items.forEach((item) => {
+  //     return <Div></Div>
+  //     })
+  //     }, [])
 
-    
     return (
         <MainContainer>
             <Header>
@@ -12,18 +21,35 @@ const ContentCard = () => {
             </Header>
             <ContentContainer>
                 <CardsContainer>
-                    <Div></Div>
-                    <Div></Div>
-                    <Div></Div>
-                    <Div></Div>
-                    <Div></Div>
+                  {
+                    module1.Items.map((part) => {
+                      if(part.item.type === 'S'){
+                     return( 
+                      <div>
+                      <Div id= {part.item.id}>
+                      <div>{part.item.heading}</div>
+                      <div>{part.item.material}</div>
+                     </Div>
+                     </div>)} else {
+                      return(
+                        <Div id={part.item.id}>
+                        <p>Hello</p><br/>
+                        <div><h4>{part.item.material[0][0]}</h4></div>
+                        <div><h6>Answer{part.item.material[0][1]}</h6></div>
+                        <div><h7>Options{part.item.material[0][2]}</h7></div>
+                        </Div>
+                        )
+                     }
+                  })
+                  // <Div></Div>
+                  }
                 </CardsContainer>
             </ContentContainer>
         </MainContainer>
     )
 }
 
-export default ContentCard
+export default ContentCard;
 const MainContainer = styled.div`
     background-image:url(${LevelOne});
     background-size:800px;
