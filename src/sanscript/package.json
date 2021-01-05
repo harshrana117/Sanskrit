@@ -1,0 +1,52 @@
+{
+  "_from": "sanscript",
+  "_id": "sanscript@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha1-XQOE5jR1xhmG2jhfvMzjoV7Ds+Y=",
+  "_location": "/sanscript",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "sanscript",
+    "name": "sanscript",
+    "escapedName": "sanscript",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/sanscript/-/sanscript-0.0.2.tgz",
+  "_shasum": "5d0384e63475c61986da385fbccce3a15ec3b3e6",
+  "_spec": "sanscript",
+  "_where": "C:\\Users\\laio\\Desktop\\react_app\\Sanskrit",
+  "author": {
+    "name": "Vikram Iyer",
+    "email": "vikram85.iyer@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/vikramiyer/sanscript.js/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Transliteration scheme for devanagari characters",
+  "homepage": "https://github.com/vikramiyer/sanscript.js#readme",
+  "keywords": [
+    "sanskrit",
+    "transliteration"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "sanscript",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikramiyer/sanscript.js.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}
